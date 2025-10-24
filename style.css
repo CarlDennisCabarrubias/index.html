@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css?family=Creepster");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
+
+html, body {
+  margin: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+/* Set the container to full screen */
+#game-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+canvas {
+  display: block;
+  background: radial-gradient(rgb(150, 200, 150), rgb(50, 100, 50));
+}
+
+/* --- Start Screen Styles --- */
+#start-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's on top */
+  color: #c90000;
+  font-family: 'Creepster', cursive;
+  text-align: center;
+}
+
+#start-screen h1 {
+  font-size: 100px;
+  text-shadow: 0 0 10px #ff0000;
+  margin-bottom: 40px;
+}
+
+#start-button {
+  padding: 15px 40px;
+  font-size: 40px;
+  font-family: 'Creepster', cursive;
+  color: white;
+  background-color: darkred;
+  border: 4px solid red;
+  cursor: pointer;
+  box-shadow: 0 0 15px red;
+  transition: background-color 0.2s;
+}
+
+#start-button:hover {
+  background-color: #ff0000;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* --- Score Display Styles --- */
+#score-display {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: black;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 24px;
+  padding: 5px 10px;
+  background-color: rgba(200, 255, 3, 0.575);
+  border-radius: 5px;
+  z-index: 10;
+  /* Start hidden, JavaScript will show/hide as needed */
+  display: none;
+}
